@@ -2,3 +2,158 @@
 	padding: 0;
 	margin: 0;
 }
+
+.clearfix{
+	content: "";
+ 	display: table;
+ 	clear: both;
+}
+.clearfix:before, .clearfix:after {
+    content: "\0020"; display: block; height: 0; visibility: hidden; 
+}
+.clearfix:after {
+	clear: both; 
+}
+html{
+	background: url("img/background.png") #0c739f;
+	background-repeat: repeat-x;
+}
+
+body{
+	margin: 38px 150px 0px 150px;
+	background-color: white;
+}
+
+header {
+	height: 175px;
+	position: relative;
+}
+p{
+	color: #2292ad;
+	font-family: Tahoma ;
+	font-size: 12px;
+}
+
+ul {
+	list-style: none;
+}
+
+.logo {
+	position: relative;
+	float: left;
+	margin: 5px 0 0 30px;
+}
+
+
+.logo p {
+	position: absolute;
+	top: 100px;
+	left: 80px;
+	text-align: center;	
+} 
+
+.contacts{
+	line-height: 15px;
+	float: right;
+	margin: 15px 35px 0 0 ;
+}
+
+.contries div{
+	height: 55px;
+	height: 55px;
+	text-align: center;
+	padding-left: 17px; 
+	float: right;
+}
+
+.contries {
+	position: absolute;
+	right: 35px;
+	bottom: 20px;
+}
+
+.contries a {
+	color: #2292ad;
+	font-size: 9px;
+}
+
+.contries a:visited {
+	color: #2292ad;
+}
+
+.photo {
+	border: 1px solid #2292ad;
+}
+
+.navigation {
+	position: relative;
+	z-index: 99;
+	width: 100%;
+	background: url("img/panel.png");
+	
+}
+
+.navigation li {
+	padding: 7px 35px;
+	float: left;
+}
+
+
+.navigation a {
+
+	color: white;
+	text-decoration: none;
+}
+
+ul li ul {
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: 30px;	
+}
+
+ul li ul li {
+	height: 15px;
+	float: none;
+	display: block;
+	background: #333;
+}
+
+ul li:hover ul {
+	display: block; 
+}
+
+.put , .uslugi {
+	position: relative;
+}
+
+.put:after , .uslugi:after {
+	content: "\2228";
+	color: white;
+}
+
+.left , .right{
+	position: relative;
+	z-index: 1;
+	background-color: #edeef0;
+	margin-top: -10px;
+	border: 1px solid grey;
+	padding: 20px;
+	line-height: 15px;
+	float: left;
+	width: 20%;
+}
+
+.right {
+	float: right;
+}
+
+.left h2 , .right h2 {
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.left p , .right p {
+	font-size: 16px;
+	line-height: 22px;
+}
