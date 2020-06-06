@@ -2,3 +2,57 @@
 	padding: 0;
 	margin: 0;
 }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #60b5ed;
+	padding: 10px 15px;
+}
+
+.header {
+	min-width: 680px;
+	width: 100%;
+	height: 35px;
+	background: url(img/bg_header.png) blue;
+}
+.header li {
+	line-height: 35px;
+	list-style: none;
+	float: right;
+}
+
+.ola a {
+	background: url(img/ola_bg.png);
+	color: white;
+	margin-right: 20px;
+}
+
+.minhas a {
+	color : white;
+}
+
+li img {
+	border-left: 1px solid #56a2dc;
+	padding-left: 20px;
+	padding-right: 10px;
+	margin-bottom: -5px;
+}
+
+.header li a:hover {
+	color: white;
+	background: #4eabda;
+}
+
+body {
+	background: url("img/background.png");
+	background-size: 100%;
+}
