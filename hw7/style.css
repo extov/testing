@@ -1,0 +1,110 @@
+@font-face {
+	font-family: League;
+	src:url("fonts/LeagueGothic-Regular.otf");
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: url("img/background.png") no-repeat;
+	background-size: auto 850px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.max_width{
+	width: 960px;
+	margin: 0 auto;
+}
+
+header {
+	height: 180px;
+}
+
+header ul li {
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	margin-top: 75px;
+	padding: 3px;
+	font-size: 24px;
+	margin-left: 45px;
+	font-family: League, sans-serif;
+	list-style: none;
+	float: right;
+}
+
+header ul li:last-child {
+	margin-top: 70px;
+	margin-left: 0;
+	line-height: 0;
+	float: left;
+}
+
+header ul li:hover {
+	border-bottom: 2px solid #edbfff;
+}
+
+.slider_bg {
+	margin-top: 100px;
+	margin-bottom: 170px;
+	width: 100%;
+	height: 400px;
+	background: rgba(0,0,0,0.2);
+}
+
+.slider {
+	position: relative;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	font-family: League, sans-serif;
+	color: white;
+}
+
+.slider_text{
+	float: left;
+	height: 200px;
+	padding-top: 100px;
+	width: 49%;
+}
+
+.slider h2{
+	color: #edbfff;
+}
+
+.slider p{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.iphone img{
+	height: 420px;
+	margin-top: -25px;
+	margin-right: 75px;
+	float: right;
+	right: 0px;
+}
+
+.about {
+	height: 340px;
+	background: linear-gradient(#745083, #322539);
+}
+
+.about_box1, .about_box2, .about_box3 {
+	box-sizing: content-box;
+	float: left;
+	width: 33%;
+	padding-left: 55px;
+}
+
