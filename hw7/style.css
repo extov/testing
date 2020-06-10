@@ -58,6 +58,11 @@ header ul li:hover {
 	border-bottom: 2px solid #edbfff;
 }
 
+
+header ul li:last-child{
+	border: none;
+}
+
 .slider_bg {
 	margin-top: 100px;
 	margin-bottom: 170px;
@@ -102,9 +107,61 @@ header ul li:hover {
 }
 
 .about_box1, .about_box2, .about_box3 {
-	box-sizing: content-box;
+	position: relative;
+	box-sizing: border-box;
 	float: left;
 	width: 33%;
 	padding-left: 55px;
 }
 
+.icon1{
+	position: absolute;
+	margin-left: -55px;
+	width: 31px;
+	height: 31px;
+	background: url(img/about.png) no-repeat;
+}
+
+.icon2{
+	position: absolute;
+	margin-left: -55px;
+	width: 31px;
+	height: 31px;
+	background: url(img/about.png) no-repeat -31px;
+}
+
+.icon3{
+	position: absolute;
+	margin-left: -55px;
+	width: 31px;
+	height: 31px;
+	background: url(img/about.png) no-repeat -62px;
+}
+
+.about {
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.about h2 ,h3 {
+	margin-bottom: 10px;
+	font-family: League, sans-serif;
+}
+
+.about h3 a:hover{
+	text-shadow: 0 0 2px rgba(255,255,255,0.9);
+}
+
+.about h3 {
+	padding-right: 10px;
+	margin-top: 25px;
+	text-align: right;
+}
+
+.about p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.blocks {
+	padding-top: 80px;
+}
