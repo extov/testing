@@ -18,7 +18,7 @@
 }
 
 body {
-	background: url("img/background.png") no-repeat;
+	background: url("img/background.png") no-repeat #f9f9f9;
 	background-size: auto 850px;
 }
 
@@ -139,6 +139,7 @@ header ul li:last-child{
 }
 
 .about {
+	margin-bottom: 120px;
 	color: white;
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 }
@@ -164,4 +165,102 @@ header ul li:last-child{
 
 .blocks {
 	padding-top: 80px;
+}
+
+.info{
+	position: relative;
+	height: 490px;
+}
+
+.info img {
+	margin-left: -65px;
+	margin-top: -15px;
+	position: absolute;
+}
+
+.start h2, .start p {
+	font-size: 30px;
+	color: #edbfff;
+	margin-right: 7px;
+	font-family: League, sans-serif;
+	float: left;
+}
+
+.start p{
+	color: #454545;
+}
+
+.start {
+	position: relative;
+	background: #fff;
+	padding: 40px;
+	width: 450px;
+	height: 275px;
+	margin: 23px;
+	box-sizing: border-box;
+}
+
+.info .start_p{
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.update{
+	width: 480px;
+	height: 275px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding: 40px 5px 0px 80px;
+	box-sizing: border-box;
+}
+
+.update h2{
+	font-family: League, sans-serif;
+	font-size: 30px;
+	color: #454545;
+}
+
+.update h3{
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+.update h3 p{
+	font-weight: 200;
+}
+
+.stat1, .stat2, .stat3{
+	margin-top: 20px;
+}
+
+.read{
+	color: #454545;
+	font-family: League, sans-serif;
+	line-height: 16px;
+	text-align: right;
+	margin:20px 20px 0 0	;
+}
+
+.read a{
+	color: #454545;
+}
+
+.nav{
+	position: absolute;
+	top: 295px;
+	left:275px;
+	margin:0px;
+	width: 83px;	
+}
+
+.logos img {
+	position: absolute;
+	left: 92px;
+	width: 775px;
+	margin: 50px 92px 20px auto;
+}
+
+hr{
+	margin-top: 100px;
 }
