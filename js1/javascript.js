@@ -1,35 +1,39 @@
-// function pow(a, b){
-// 	let res = 1;
-// 	for (var i = 0; i < b; i++) {
-// 		res = res*a;
+let div = document.createElement('div');
+div.innerHTML = "<h1>Тест по программированию</h1>";
 
-// 	}
-// 	return res;
-// }
-// let a, b;
+document.body.append(div);
 
-// a = +prompt('Введите число');
-// b = +prompt('Введите степень');
-// let res = pow(a,b);
 
-// console.log(res);
 
-let arr = [];
-for (let i = 0; i < 5; i++){
-	arr[i] = prompt(`Введите ${i+1}-е имя : `);
-}
-
-let name = prompt('Введите имя пользователя : ');
-
-function login(){
-	for (let i = 0; i < 5; i++){
-		if(arr[i] == name) {
-			alert(`${name} вы успешно вошли`);
-			return 0;
-		} 
-		
+let cr = {
+	
+	ulist: [],
+	newUl(i, klas){
+		this.ulist[i] = document.createElement('ul');
+		this.ulist[i].classList.add(klas);
+		this.ulist[i].innerHTML = "Вопрос № " + i;
+		div.append(this.ulist[i]);
+	},
+	lists: [],
+	newLi(i,id){
+		let idd = document.querySelector(id);
+		this.lists[i] = document.createElement('li');
+		this.lists[i].innerHTML = "Вариант ответа " + i;
+		idd.appendChild(this.lists[i]);
 	}
-	alert('Имя не найдено');
 }
 
-login();
+cr.newUl(1,'first');
+	for(let i = 0; i < 3; i++){
+	cr.newLi(i+1,'.first');
+	}
+
+cr.newUl(2,'second');
+	for(let i = 0; i < 3; i++){
+	cr.newLi(i+1,'.second');
+	}
+cr.newUl(3,'third');
+	for(let i = 0; i < 3; i++){
+	cr.newLi(i+1,'.third');
+	}
+
