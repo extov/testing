@@ -7,11 +7,12 @@ let t;
 seconds.innerHTML = x;
 
 function go(){
+	console.log(start); //debugging
 	seconds.innerHTML--;
-	if(seconds.innerHTML == 0 || start.value == 'Pause'){
-		start.value = 'Start';
+	if(seconds.innerHTML == 0){
 		clearInterval(t);
 	}
+
 }
 
 function started(){
@@ -21,6 +22,14 @@ function started(){
 	}
 }
 
+function pause(){
+	if(start.value == 'Pause'){
+		clearInterval(t);
+		start.value = 'Start';	
+	}
+}
+
 start.addEventListener("click", started);
-start.addEventListener("click", stop);
-clear.addEventListener("click", del);
+
+if(start.value == 'Pause') 
+	start.addEventListener("click", pause);
