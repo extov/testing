@@ -7,29 +7,39 @@ let t;
 seconds.innerHTML = x;
 
 function go(){
+	if (seconds.innerHTML == 0) return false;
 	console.log(start); //debugging
 	seconds.innerHTML--;
-	if(seconds.innerHTML == 0){
-		clearInterval(t);
+	start.onclick = function(){
+		pause();
 	}
+	if(seconds.innerHTML == 0){
+		start.value = "End of timer";
+		clearInterval(t);
+		start.disabled = true;
+	}
+	
+
 
 }
 
 function started(){
-	if(start.value == 'Start'){
 		start.value = 'Pause';
 		t = setInterval(go, 1000);
-	}
 }
 
 function pause(){
-	if(start.value == 'Pause'){
 		clearInterval(t);
-		start.value = 'Start';	
-	}
+		start.value = 'Start';
+		start.onclick = started;
 }
 
-start.addEventListener("click", started);
+function reset(){
+	seconds.innerHTML = x;
+	clearInterval(t);
+	start.value = 'Start';
+	start.onclick = started;
+}
 
-if(start.value == 'Pause') 
-	start.addEventListener("click", pause);
+start.onclick = started;
+clear.onclick = reset;
