@@ -13,14 +13,6 @@ function go(){
 	start.onclick = function(){
 		pause();
 	}
-	if(seconds.innerHTML == 0){
-		start.value = "End of timer";
-		clearInterval(t);
-		start.disabled = true;
-	}
-	
-
-
 }
 
 function started(){
