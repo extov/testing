@@ -1,0 +1,28 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.submenu{
+	display: none;
+	font-size: 18px;
+}
+
+.menu{
+	display: block;
+	margin: 50px;
+	font-size: 26px;
+}
+
+.menu > li{
+	width: 200px;
+	margin: : 30px;
+	float: left;
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
