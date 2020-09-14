@@ -1,3 +1,12 @@
+let testing = {
+	q1: 'first1',
+	q2: 'second2',
+	q3: 'third3',
+};
+
+localStorage.setItem('testing', JSON.stringify(testing));
+
+
 let div = document.createElement('div');
 div.innerHTML = "<h1>Тест по программированию</h1>";
 
@@ -19,44 +28,49 @@ let cr = {
 		let idd = document.querySelector(id);
 		this.lists[i] = document.createElement('li');
 		this.lists[i].classList.add(j+i);
-		this.lists[i].innerHTML = "Вариант ответа " + i;
 		idd.appendChild(this.lists[i]);
 	},
 	labels : [],
-	newLabel(){
-		let lis;
-		if(e=0) lis =document.querySelector('first > claz'+e);
+	inputs: [],
+	newLabel(i,j,k){
+		i++;
+		let lis = document.querySelector('.'+j+i);
 		console.log(lis);
-		// this.labels[i] = document.createElement('label');
-		// this.labels[i].innerHTML = "Вариант ответа " + i;
+		this.labels[i] = document.createElement('label');
+		this.labels[i].setAttribute('name', j+i);
+
+		this.labels[i].innerHTML = "Вариант ответа " + i;
+		this.inputs[i] = document.createElement('input');
+		this.inputs[i].setAttribute('type','radio');
+		this.inputs[i].setAttribute('name',j);
+		this.labels[i].prepend(this.inputs[i]);
+		lis.appendChild(this.labels[i]);
+
 
 	}
 }
 
-// cr.newUl(1,'first');
-// 	for(let i = 0; i < 3; i++){
-// 	cr.newLi(i+1,'.first');
-// 	}
-
-// cr.newUl(2,'second');
-// 	for(let i = 0; i < 3; i++){
-// 	cr.newLi(i+1,'.second');
-// 	}
-// cr.newUl(3,'third');
-// 	for(let i = 0; i < 3; i++){
-// 	cr.newLi(i+1,'.third');
-// 	}
-
-for(let i = 0;i < 3; i++){
+for(let i = 1;i < 4; i++){
 	let j,k;
 	switch (i){
-		case 0: j='first'; k='.first'; break;
-		case 1: j='second'; k='.second'; break;
-		case 2: j='third'; k='.third'; break;
+		case 1: j='first'; k='.first'; break;
+		case 2: j='second'; k='.second'; break;
+		case 3: j='third'; k='.third'; break;
 	}
 	cr.newUl(i, j);
 	for(let e = 0; e < 3; e++){
 		cr.newLi(e+1, k,j);
-		cr.newLabel();
+		cr.newLabel(e,j,k);
 	}
 }
+
+let but = document.createElement('input');
+but.setAttribute('type', 'button');
+but.setAttribute('value', 'TEST');
+document.querySelector('body').append(but);
+
+but.onclick =  function(){
+	
+	
+	
+};
